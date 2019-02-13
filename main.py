@@ -52,7 +52,7 @@ def menu():
     print('5. Por renderizar un cubo')
     print('6. Por llenar un cubo isométrico')
 
-glCreateWindow(800,400)
+glCreateWindow(800,600)
 
 option = True 
 while option: 
@@ -140,7 +140,7 @@ while option:
     elif menuOption == "6":
         print("----")
         input ("Has ingresado a la opción 6...\npulsa una tecla para continuar")
-        glViewPort(0,0,799,599)
+        glViewPort(0,0,700,500)
         glClear()
         glColor(1, 0, 0)
         glVertex(0,0)
