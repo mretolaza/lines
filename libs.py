@@ -175,9 +175,9 @@ class Bitmap(object):
         #while (x2  + 1) >= count:
         for x in range (x1,x2 +1): 
             if steep:    
-                self.point(y, x , self.newGlColor)
+                self.vertex(self.getNormYCoord(y), self.getNormXCoord(x))
             else: 
-                self.point(x, y, self.newGlColor)
+                self.vertex(self.getNormXCoord(x), self.getNormYCoord(y))
 
             offset += dy * 2
             if offset >= threshold: 

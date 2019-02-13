@@ -1,5 +1,6 @@
 import libs 
 import struct
+import math
 import os 
 from libs import Bitmap
 from libs import word
@@ -37,6 +38,12 @@ def glVertex(x,y):
 
 def glLine (x1,y1, x2,y2):
     img.line(x1, y1, x2, y2)
+
+def newX(x):
+    img.getNormXCoord(math.floor(x))
+
+def newY(y):
+    img.getNormYCoord(math.floor(y))
 
 #Show new image 
 def glFinish():
