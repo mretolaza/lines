@@ -40,7 +40,7 @@ def glLine (x1,y1, x2,y2):
     img.line(x1, y1, x2, y2)
 
 def glLineC (x1,y1, x2,y2):
-    img.line(x1, y1, x2, y2)
+    img.lineCube(x1, y1, x2, y2)
 
 def newX(x):
     img.getNormXCoord(math.floor(x))
