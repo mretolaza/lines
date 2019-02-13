@@ -184,3 +184,39 @@ class Bitmap(object):
                 y += 1 if y1 < y2 else -1 
                 threshold += 1 * 2 * dx
             #count += 1 
+
+    def lineCube (self, x1, y1, x2, y2): 
+        
+        dy = abs(y2 - y1) 
+        dx = abs(x2 - x1) 
+
+        steep = dy > dx 
+
+        if steep: 
+            x1, y1 = y1 , x1 
+            x2, y2  = y2, x2 
+
+        if  x1 > x2: 
+            x1,x2 = x2, x1 
+            y1, y2 = y2, y1
+
+        dy = abs(y2 - y1)  
+        dx = abs(x2 - x1)  
+
+        offset = 0  * 2 * dx
+        threshold = 0.5 * 2 * dx
+
+        y = y1 
+        #count = x1 
+        #while (x2  + 1) >= count:
+        for x in range (x1,x2 +1): 
+            if steep:    
+                self.point(y, x, self.newGlColor)
+            else: 
+                self.point(x,y, self.newGlColor)
+
+            offset += dy * 2
+            if offset >= threshold: 
+                y += 1 if y1 < y2 else -1 
+                threshold += 1 * 2 * dx
+            #count += 1 

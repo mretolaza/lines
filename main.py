@@ -39,6 +39,9 @@ def glVertex(x,y):
 def glLine (x1,y1, x2,y2):
     img.line(x1, y1, x2, y2)
 
+def glLineC (x1,y1, x2,y2):
+    img.line(x1, y1, x2, y2)
+
 def newX(x):
     img.getNormXCoord(math.floor(x))
 
@@ -129,18 +132,18 @@ while option:
         glClear()
         glColor(1, 0, 0)
         glVertex(0,0)
-        glLine(100, 100, 200, 100)
-        glLine(100, 100, 100, 200)
-        glLine(200, 100, 200, 200)
-        glLine(100, 200, 200, 200)
-        glLine(150, 150, 250, 150)
-        glLine(150, 150, 150, 250)
-        glLine(250, 150, 250, 250)
-        glLine(150, 250, 250, 250)
-        glLine(100, 100, 150, 150)
-        glLine(100, 200, 150, 250)
-        glLine(200, 100, 250, 150)
-        glLine(200, 200, 250, 250)
+        glLineC(100, 100, 200, 100)
+        glLineC(100, 100, 100, 200)
+        glLineC(200, 100, 200, 200)
+        glLineC(100, 200, 200, 200)
+        glLineC(150, 150, 250, 150)
+        glLineC(150, 150, 150, 250)
+        glLineC(250, 150, 250, 250)
+        glLineC(150, 250, 250, 250)
+        glLineC(100, 100, 150, 150)
+        glLineC(100, 200, 150, 250)
+        glLineC(200, 100, 250, 150)
+        glLineC(200, 200, 250, 250)
 
         glFinish()
     
@@ -151,15 +154,15 @@ while option:
         glClear()
         glColor(1, 0, 0)
         glVertex(0,0)
-        glLine(200, 200, 287, 250)
-        glLine(200, 200, 113, 250)
-        glLine(200, 200, 200, 300)
-        glLine(287, 250, 287, 350)
-        glLine(113, 250, 113, 350)
-        glLine(200, 300, 287, 350)
-        glLine(200, 300, 113, 350)
-        glLine(287, 350, 200, 400)
-        glLine(113, 350, 200, 400)       
+        glLineC(200, 200, 287, 250)
+        glLineC(200, 200, 113, 250)
+        glLineC(200, 200, 200, 300)
+        glLineC(287, 250, 287, 350)
+        glLineC(113, 250, 113, 350)
+        glLineC(200, 300, 287, 350)
+        glLineC(200, 300, 113, 350)
+        glLineC(287, 350, 200, 400)
+        glLineC(113, 350, 200, 400)       
         glFinish()
 
     elif menuOption == "0":
