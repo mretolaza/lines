@@ -66,7 +66,11 @@ while option:
         glClear()
         glColor(1, 0, 0)
         glVertex(0,0)
-        glLine(299,200,100,100)
+        glLine(10,10,510,10)
+        glLine(10,10,462,191)
+        glLine(10,10,354,354)
+        glLine(10,10,191,462)
+        glLine(10,10,10,510)
         glFinish()
 
     elif menuOption == "2":
@@ -76,7 +80,11 @@ while option:
         glClear()
         glColor(1, 0, 0)
         glVertex(0,0)
-       
+        glLine(790,590,790,90)
+        glLine(790,590,609,138)
+        glLine(790,590,446,246)
+        glLine(790,590,338,409)
+        glLine(790,590,290,590)
         glFinish()
     
     elif menuOption == "3":
@@ -86,7 +94,11 @@ while option:
         glClear()
         glColor(1, 0, 0)
         glVertex(0,0)
-        
+        glLine(10,590,510,590)
+        glLine(10,590,462,409)
+        glLine(10,590,354,246)
+        glLine(10,590,191,138)
+        glLine(10,590,10,90)
         glFinish()
     
     elif menuOption == "4":
@@ -96,7 +108,11 @@ while option:
         glClear()
         glColor(1, 0, 0)
         glVertex(0,0)
-       
+        glLine(790,10,790,510)
+        glLine(790,10,609,462)
+        glLine(790,10,446,354)
+        glLine(790,10,338,191)
+        glLine(790,10,290,10)
         glFinish()
     
     elif menuOption == "5":
@@ -106,7 +122,19 @@ while option:
         glClear()
         glColor(1, 0, 0)
         glVertex(0,0)
-       
+        glLine(100, 100, 200, 100)
+        glLine(100, 100, 100, 200)
+        glLine(200, 100, 200, 200)
+        glLine(100, 200, 200, 200)
+        glLine(150, 150, 250, 150)
+        glLine(150, 150, 150, 250)
+        glLine(250, 150, 250, 250)
+        glLine(150, 250, 250, 250)
+        glLine(100, 100, 150, 150)
+        glLine(100, 200, 150, 250)
+        glLine(200, 100, 250, 150)
+        glLine(200, 200, 250, 250)
+
         glFinish()
     
     elif menuOption == "6":
@@ -116,13 +144,16 @@ while option:
         glClear()
         glColor(1, 0, 0)
         glVertex(0,0)
-       
+        glLine(200, 200, 287, 250)
+        glLine(200, 200, 113, 250)
+        glLine(200, 200, 200, 300)
+        glLine(287, 250, 287, 350)
+        glLine(113, 250, 113, 350)
+        glLine(200, 300, 287, 350)
+        glLine(200, 300, 113, 350)
+        glLine(287, 350, 200, 400)
+        glLine(113, 350, 200, 400)       
         glFinish()
-    
-
-    
-    
-   
 
     elif menuOption == "0":
         break 

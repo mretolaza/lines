@@ -171,16 +171,16 @@ class Bitmap(object):
         threshold = 0.5 * 2 * dx
 
         y = y1 
-        count = x1 
-        while (x2  + 1) >= count:
-        #for x in range (x1,x2 +1): 
+        #count = x1 
+        #while (x2  + 1) >= count:
+        for x in range (x1,x2 +1): 
             if steep:    
-                self.point(y, count , self.newGlColor)
+                self.point(y, x , self.newGlColor)
             else: 
-                self.point(count, y, self.newGlColor)
+                self.point(x, y, self.newGlColor)
 
             offset += dy * 2
             if offset >= threshold: 
                 y += 1 if y1 < y2 else -1 
                 threshold += 1 * 2 * dx
-            count += 1 
+            #count += 1 
