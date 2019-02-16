@@ -36,24 +36,21 @@ def glClearColor(r,g,b):
 def glVertex(x,y):
     img.vertex(x,y)
 
+def getNewX(x): 
+    return img.getNormXCoord(x)
+
+def getNewY(y): 
+    return img.getNormYCoord(y)
+
 def glLine (x1,y1, x2,y2):
     img.line(x1, y1, x2, y2)
-
-def glLineC (x1,y1, x2,y2):
-    img.lineCube(x1, y1, x2, y2)
-
-def newX(x):
-    img.getNormXCoord(math.floor(x))
-
-def newY(y):
-    img.getNormYCoord(math.floor(y))
 
 #Show new image 
 def glFinish():
     img.writeFile("img.bmp")
 
 def menu(): 
-    os.system('cls')
+  #  os.system('cls')
     print ('0. Salir')
     print('1. Por renderizar una imagen negra con las siguientes líneas')
     print('2. Por una imagen negra con las siguientes líneas (parte dos)')
@@ -76,11 +73,11 @@ while option:
         glClear()
         glColor(1, 0, 0)
         glVertex(0,0)
-        glLine(10,10,510,10)
-        glLine(10,10,462,191)
-        glLine(10,10,354,354)
-        glLine(10,10,191,462)
-        glLine(10,10,10,510)
+        glLine(getNewX(10),getNewY(10),getNewX(510),getNewY(10))
+        glLine(getNewX(10),getNewY(10),getNewX(462),getNewY(191))
+        glLine(getNewX(10),getNewY(10),getNewX(354),getNewY(354))
+        glLine(getNewX(10),getNewY(10),getNewX(191),getNewY(462))
+        glLine(getNewX(10),getNewY(10),getNewX(10),getNewY(510))
         glFinish()
 
     elif menuOption == "2":
@@ -90,11 +87,11 @@ while option:
         glClear()
         glColor(1, 0, 0)
         glVertex(0,0)
-        glLine(790,590,790,90)
-        glLine(790,590,609,138)
-        glLine(790,590,446,246)
-        glLine(790,590,338,409)
-        glLine(790,590,290,590)
+        glLine(getNewX(790),getNewY(590),getNewX(790),getNewY(90))
+        glLine(getNewX(790),getNewY(590),getNewX(609),getNewY(138))
+        glLine(getNewX(790),getNewY(590),getNewX(446),getNewY(246))
+        glLine(getNewX(790),getNewY(590),getNewX(338),getNewY(409))
+        glLine(getNewX(790),getNewY(590),getNewX(290),getNewY(590))
         glFinish()
     
     elif menuOption == "3":
@@ -104,11 +101,11 @@ while option:
         glClear()
         glColor(1, 0, 0)
         glVertex(0,0)
-        glLine(10,590,510,590)
-        glLine(10,590,462,409)
-        glLine(10,590,354,246)
-        glLine(10,590,191,138)
-        glLine(10,590,10,90)
+        glLine(getNewX(10),getNewY(590),getNewX(510),getNewY(590))
+        glLine(getNewX(10),getNewY(590),getNewX(462),getNewY(409))
+        glLine(getNewX(10),getNewY(590),getNewX(354),getNewY(246))
+        glLine(getNewX(10),getNewY(590),getNewX(191),getNewY(138))
+        glLine(getNewX(10),getNewY(590),getNewX(10),getNewY(90))
         glFinish()
     
     elif menuOption == "4":
@@ -118,11 +115,11 @@ while option:
         glClear()
         glColor(1, 0, 0)
         glVertex(0,0)
-        glLine(790,10,790,510)
-        glLine(790,10,609,462)
-        glLine(790,10,446,354)
-        glLine(790,10,338,191)
-        glLine(790,10,290,10)
+        glLine(getNewX(790),getNewY(10),getNewX(790),getNewY(510))
+        glLine(getNewX(790),getNewY(10),getNewX(609),getNewY(462))
+        glLine(getNewX(790),getNewY(10),getNewX(446),getNewY(354))
+        glLine(getNewX(790),getNewY(10),getNewX(338),getNewY(191))
+        glLine(getNewX(790),getNewY(10),getNewX(290),getNewY(10))
         glFinish()
     
     elif menuOption == "5":
@@ -132,18 +129,18 @@ while option:
         glClear()
         glColor(1, 0, 0)
         glVertex(0,0)
-        glLineC(100, 100, 200, 100)
-        glLineC(100, 100, 100, 200)
-        glLineC(200, 100, 200, 200)
-        glLineC(100, 200, 200, 200)
-        glLineC(150, 150, 250, 150)
-        glLineC(150, 150, 150, 250)
-        glLineC(250, 150, 250, 250)
-        glLineC(150, 250, 250, 250)
-        glLineC(100, 100, 150, 150)
-        glLineC(100, 200, 150, 250)
-        glLineC(200, 100, 250, 150)
-        glLineC(200, 200, 250, 250)
+        glLine(getNewX(100), getNewY(100), getNewX(200), getNewY(100))
+        glLine(getNewX(100), getNewY(100), getNewX(100), getNewY(200))
+        glLine(getNewX(200), getNewY(100), getNewX(200), getNewY(200))
+        glLine(getNewX(100), getNewY(200), getNewX(200), getNewY(200))
+        glLine(getNewX(150), getNewY(150), getNewX(250), getNewY(150))
+        glLine(getNewX(150), getNewY(150), getNewX(150), getNewY(250))
+        glLine(getNewX(250), getNewY(150), getNewX(250), getNewY(250))
+        glLine(getNewX(150), getNewY(250), getNewX(250), getNewY(250))
+        glLine(getNewX(100), getNewY(100), getNewX(150), getNewY(150))
+        glLine(getNewX(100), getNewY(200), getNewX(150), getNewY(250))
+        glLine(getNewX(200), getNewY(100), getNewX(250), getNewY(150))
+        glLine(getNewX(200), getNewY(200), getNewX(250), getNewY(250))
 
         glFinish()
     
@@ -154,15 +151,15 @@ while option:
         glClear()
         glColor(1, 0, 0)
         glVertex(0,0)
-        glLineC(200, 200, 287, 250)
-        glLineC(200, 200, 113, 250)
-        glLineC(200, 200, 200, 300)
-        glLineC(287, 250, 287, 350)
-        glLineC(113, 250, 113, 350)
-        glLineC(200, 300, 287, 350)
-        glLineC(200, 300, 113, 350)
-        glLineC(287, 350, 200, 400)
-        glLineC(113, 350, 200, 400)       
+        glLine(getNewX(200), getNewY(200), getNewX(287), getNewY(250))
+        glLine(getNewX(200), getNewY(200), getNewX(113), getNewY(250))
+        glLine(getNewX(200), getNewY(200), getNewX(200), getNewY(300))
+        glLine(getNewX(287), getNewY(250), getNewX(287), getNewY(350))
+        glLine(getNewX(113), getNewY(250), getNewX(113), getNewY(350))
+        glLine(getNewX(200), getNewY(300), getNewX(287), getNewY(350))
+        glLine(getNewX(200), getNewY(300), getNewX(113), getNewY(350))
+        glLine(getNewX(287), getNewY(350), getNewX(200), getNewY(400))
+        glLine(getNewX(113), getNewY(350), getNewX(200), getNewY(400))       
         glFinish()
 
     elif menuOption == "0":
